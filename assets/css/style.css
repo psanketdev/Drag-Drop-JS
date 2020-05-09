@@ -1,0 +1,271 @@
+@charset "utf-8";
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html { overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+img {
+  width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+   ========================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
+
+/*for all*/
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a { 
+  display: inline-block;
+  text-decoration: none; 
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/*for wrapper*/
+.wrapper {
+  max-width: 1360px;
+  width: 86%; 
+  margin: 0 auto;
+}
+/*=================================
+  Header styling starts here
+=================================*/
+header, footer {
+  padding: 1.5% 0;
+  background-color: #000;
+}
+
+.center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+h1 {
+  display: inline-block;
+  text-align: left;
+}
+
+nav ul {
+  display: inline-block;
+  text-align: right;
+  position: relative;
+}
+
+nav li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+nav li a {
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+
+
+nav li:nth-child(1) a {
+  padding-right: 10px;
+  border-right: 1px solid #fff;
+}
+
+nav li:not(:last-of-type) { margin-right: 10px;}
+
+nav span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 23%;
+  right: 95%;
+}
+
+
+/*=================================
+  Header styling ends here
+=================================*/  
+
+/*=================================
+  main styling starts here
+=================================*/
+main {background-color: #fff;}
+
+h2 {
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 2% 0;
+  letter-spacing: .7px;
+}
+
+.set-priorities  {
+  width: 100%;
+  margin: 0 0 4.7%;
+  display: -webkit-box;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.set-priorities li {
+  width: 28.5%;
+  box-sizing: border-box;
+  border: 2px solid #000;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+/* .set-priorities li:not(:last-of-type) { margin-right: 6.4%;} */
+
+.set-priorities li span:first-child {
+  width: 100%;
+  padding: 5% 0;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  display: block;
+  font-size: 14.5px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .8px;
+}
+
+.high span:first-child{ background-color: #e74c3c;}
+.medium span:first-child{ background-color: #e67e22;}
+.low span:first-child{ background-color: #f1c40f;}
+
+.set-priorities li span:last-child {
+  min-height: 270px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  display: block;
+}
+
+.drag-btn { padding-bottom: 3.3%;}
+
+.task {
+  padding: 10px 30px;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+.drop {
+  padding: 5%;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.drop a:nth-child(odd) { margin: 0 18% 10px 0;}
+.drag-btn li:not(:last-of-type) { margin-right: 20px;}
+.hide { visibility: hidden;}
+.visible { visibility: visible;}
+.bgcolor { background-color: #f1f1f1;}
+
+/*=================================
+  main styling ends here
+=================================*/
+
+/*=================================
+  footer styling starts here
+=================================*/ 
+
+
+
+
+
+
+
+ /*=================================
+  footer styling ends here
+=================================*/ 
+
+/*media query starts*/
+/*media query for 995px starts here*/
+@media only screen and (max-width: 995px) {
+
+
+
+}  
